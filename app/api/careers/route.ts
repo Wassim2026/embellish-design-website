@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server";import {db} from "@/lib/mongodb";
+export async function POST(req:Request){try{const body=await req.json();if(!body.name||!body.email||!body.role)return NextResponse.json({error:"Please complete all required fields."},{status:400});await (await db()).collection("career_applications").insertOne({...body,status:"received",createdAt:new Date()});return NextResponse.json({ok:true})}catch{return NextResponse.json({error:"Unable to submit right now."},{status:500})}}

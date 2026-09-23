@@ -32,7 +32,7 @@ export const services: Service[] = [
     title: "Construction Work",
     short: "Reliable building and civil construction delivered with disciplined planning, supervision and quality control.",
     intro: "We manage construction work from site preparation through structural, architectural and finishing stages, coordinating trades, materials and inspections around a clear programme.",
-    image: "/embellish-construction-rebar.webp",
+    image: "/embellish-construction-site-v2.webp",
     deliverables: ["Site preparation and mobilisation", "Structural and civil works", "Blockwork, plastering and finishes", "Testing, snagging and handover"],
     process: [
       { title: "Assess", text: "Review the site, drawings, scope, access and authority requirements." },
@@ -62,7 +62,7 @@ export const services: Service[] = [
     title: "Landscaping & Swimming Pools",
     short: "Complete outdoor environments combining planting, hardscape, irrigation and swimming-pool construction.",
     intro: "We create practical, inviting outdoor spaces suited to the UAE climate, bringing landscape design, external works and pool systems together in one coordinated delivery.",
-    image: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1800&q=88",
+    image: "/embellish-pool-landscape-work-v2.webp",
     deliverables: ["Landscape design and planting", "Paving, decking and outdoor structures", "Irrigation and landscape lighting", "Swimming pools, filtration and water features"],
     process: [
       { title: "Imagine", text: "Define the outdoor experience, functions and visual direction." },
@@ -77,7 +77,7 @@ export const services: Service[] = [
     title: "Project Management",
     short: "One accountable team controlling programme, procurement, cost, quality and communication.",
     intro: "We keep construction and landscape projects moving by making responsibilities visible, decisions timely and site information reliable from mobilisation to close-out.",
-    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1800&q=88",
+    image: "/embellish-project-management-site-v2.webp",
     deliverables: ["Programme and procurement tracking", "Budget and variation control", "Site coordination and reporting", "Quality, snagging and close-out"],
     process: [
       { title: "Plan", text: "Set milestones, responsibilities, reporting and decision dates." },
@@ -120,11 +120,11 @@ export const projects: Project[] = [
     challenge: "The existing villa felt fragmented and dated, with limited storage and little connection between the main living spaces.",
     solution: "Selective openings improved flow, while a restrained palette of stone, oak and soft neutrals unified the home. Bespoke joinery absorbed everyday storage.",
     result: "A brighter, calmer home that feels cohesive without losing the comfort and durability required for family life.",
-    cover: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=88",
+    cover: "/jumeirah-villa-exterior-v2.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1500&q=86",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=86",
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1500&q=86",
+      "/jumeirah-villa-living-v2.webp",
+      "/jumeirah-villa-kitchen-v2.webp",
+      "/jumeirah-villa-courtyard-v2.webp",
     ],
   },
   {

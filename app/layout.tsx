@@ -7,8 +7,8 @@ import "./navigation.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://embellish-design-website.vercel.app"),
-  title: { default: "Embellish Design | Interior Fit-Out Dubai", template: "%s | Embellish Design" },
-  description: "Dubai interior design and contracting company delivering fit-out, renovation, MEP, joinery and project management services.",
+  title: { default: "Embellish Design | Construction & Landscaping Dubai", template: "%s | Embellish Design" },
+  description: "Dubai contracting company delivering construction, demolition, landscaping, swimming pools and project management services.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: { title: "Embellish Design", description: "Considered design. Dependable delivery.", type: "website", locale: "en_AE" },
 };

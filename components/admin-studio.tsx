@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Project, Service } from "@/lib/content";
 
@@ -32,7 +33,7 @@ export function AdminStudio({ initial }: { initial: Draft }) {
   }
 
   return <div className="admin-shell">
-    <aside className="admin-sidebar"><div><small>EMBELLISH</small><strong>Content Studio</strong></div><nav>{(["overview", "services", "projects", "enquiries", "settings"] as Tab[]).map((item) => <button className={tab === item ? "active" : ""} key={item} onClick={() => setTab(item)}>{item}</button>)}</nav><Link href="/" target="_blank">View website ↗</Link></aside>
+    <aside className="admin-sidebar"><div className="admin-brand"><Image src="/embellish-logo-mark.png" alt="Embellish Design" width={48} height={42} /><span><small>EMBELLISH DESIGN</small><strong>Content Studio</strong></span></div><nav>{(["overview", "services", "projects", "enquiries", "settings"] as Tab[]).map((item) => <button className={tab === item ? "active" : ""} key={item} onClick={() => setTab(item)}>{item}</button>)}</nav><Link href="/" target="_blank">View website ↗</Link></aside>
     <section className="admin-main">
       <header><div><p className="admin-kicker">ADMIN PANEL · PREVIEW MODE</p><h1>{tab}</h1></div><button onClick={save}>{saved ? "Draft saved" : "Save local draft"}</button></header>
       {tab === "overview" && <><div className="admin-notice"><b>Publishing connection pending</b><p>This studio is ready for content editing. Drafts save in this browser until the production database and secure administrator login are connected.</p></div><div className="admin-stats"><article><span>{draft.services.length}</span><p>Service pages</p></article><article><span>{draft.projects.length}</span><p>Project case studies</p></article><article><span>0</span><p>New enquiries</p></article><article><span>Live</span><p>Website status</p></article></div><div className="admin-panel"><h2>Website checklist</h2><ul><li><b>Complete</b> Core company pages</li><li><b>Complete</b> Individual service pages</li><li><b>Complete</b> Project case studies and galleries</li><li><b>Pending</b> Database and protected login</li><li><b>Pending</b> Final domain connection</li></ul></div></>}

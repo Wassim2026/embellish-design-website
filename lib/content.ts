@@ -32,7 +32,7 @@ export const services: Service[] = [
     title: "Construction Work",
     short: "Reliable building and civil construction delivered with disciplined planning, supervision and quality control.",
     intro: "We manage construction work from site preparation through structural, architectural and finishing stages, coordinating trades, materials and inspections around a clear programme.",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=88",
+    image: "/embellish-construction-rebar.webp",
     deliverables: ["Site preparation and mobilisation", "Structural and civil works", "Blockwork, plastering and finishes", "Testing, snagging and handover"],
     process: [
       { title: "Assess", text: "Review the site, drawings, scope, access and authority requirements." },
@@ -47,7 +47,7 @@ export const services: Service[] = [
     title: "Demolition & Wrecking Work",
     short: "Controlled demolition, dismantling and site clearance carried out safely and responsibly.",
     intro: "Our demolition team plans every stage around structural conditions, neighbouring properties, access and waste handling to prepare sites safely for their next phase.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=88",
+    image: "/embellish-pool-demolition.webp",
     deliverables: ["Site surveys and demolition planning", "Soft strip and selective dismantling", "Structural demolition and wrecking", "Debris removal and site clearance"],
     process: [
       { title: "Survey", text: "Identify structural, utility, access and environmental risks." },

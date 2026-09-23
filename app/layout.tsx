@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://embellish-design-website.vercel.app"),
   title: { default: "Embellish Design | Construction & Landscaping Dubai", template: "%s | Embellish Design" },
   description: "Dubai contracting company delivering construction, demolition, landscaping, swimming pools and project management services.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/favicon.png" },
   openGraph: { title: "Embellish Design", description: "Considered design. Dependable delivery.", type: "website", locale: "en_AE" },
 };
 

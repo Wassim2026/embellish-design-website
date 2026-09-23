@@ -3,6 +3,7 @@ import { Footer, Header, WhatsAppLink } from "@/components/site-chrome";
 import "./globals.css";
 import "./pages.css";
 import "./forms.css";
+import "./navigation.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://embellish-design-website.vercel.app"),

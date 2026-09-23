@@ -27,7 +27,7 @@ const dropdowns = [
 export function Brand({ light = false }: { light?: boolean }) {
   return (
     <Link className={`brand${light ? " brand-light" : ""}`} href="/" aria-label="Embellish Design home">
-      <span className="brand-mark"><i>E</i></span>
+      <Image className="brand-logo" src="/embellish-logo-mark.png" alt="" width={48} height={42} priority />
       <span>EMBELLISH <b>DESIGN</b></span>
     </Link>
   );

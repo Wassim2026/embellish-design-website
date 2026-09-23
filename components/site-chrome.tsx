@@ -3,13 +3,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { projects, services } from "@/lib/content";
 
 const navigation = [
   ["About", "/about"],
-  ["Services", "/services"],
-  ["Projects", "/projects"],
   ["Careers", "/careers"],
   ["Contact", "/contact"],
+];
+
+const dropdowns = [
+  {
+    label: "Services",
+    href: "/services",
+    items: services.map(({ title, slug }) => ({ label: title, href: `/services/${slug}` })),
+  },
+  {
+    label: "Projects",
+    href: "/projects",
+    items: projects.map(({ title, slug }) => ({ label: title, href: `/projects/${slug}` })),
+  },
 ];
 
 export function Brand({ light = false }: { light?: boolean }) {
@@ -28,7 +40,21 @@ export function Header() {
       <Brand />
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation"><span /><span /></button>
       <nav className={open ? "nav open" : "nav"} aria-label="Primary navigation">
-        {navigation.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
+        <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+        {dropdowns.map((dropdown) => (
+          <div className="nav-group" key={dropdown.href}>
+            <Link className="nav-parent" href={dropdown.href} onClick={() => setOpen(false)}>
+              {dropdown.label}<span aria-hidden="true">⌄</span>
+            </Link>
+            <div className="nav-dropdown" aria-label={`${dropdown.label} pages`}>
+              <Link className="nav-all" href={dropdown.href} onClick={() => setOpen(false)}>View all {dropdown.label.toLowerCase()}</Link>
+              {dropdown.items.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
+              ))}
+            </div>
+          </div>
+        ))}
+        {navigation.slice(1).map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
         <a className="nav-cta" href="tel:+971525242962">Call us</a>
       </nav>
     </header>
@@ -42,7 +68,9 @@ export function Footer() {
         <Brand light />
         <p>Considered design.<br />Dependable delivery.</p>
         <div className="footer-links">
-          {navigation.slice(0, 3).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+          <Link href="/about">About</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/projects">Projects</Link>
           <Link href="/contact">Start a project</Link>
         </div>
       </div>
@@ -63,4 +91,3 @@ export function PageHero({ label, title, text, image }: { label: string; title: 
 export function WhatsAppLink() {
   return <a className="whatsapp-float" href="https://wa.me/971525242962?text=Hello%20Embellish%20Design%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" aria-label="Message Embellish Design on WhatsApp">WA</a>;
 }
-

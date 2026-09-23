@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Construction Services Dubai", descri
 export default function ServicesPage() {
   return <main><PageHero label="OUR SERVICES" title="One team. Every detail." text="Construction and outdoor works shaped around your site, programme, safety requirements and commercial goals." image={services[0].image} />
     <section className="page-content service-list">
-      {services.map((service) => <Link href={`/services/${service.slug}`} key={service.slug} className="service-row"><div className="service-row-copy"><span>{service.number}</span><h2>{service.title}</h2><p>{service.short}</p><b>View service ↗</b></div><div className="service-row-image"><Image src={service.image} alt={service.title} fill sizes="(max-width: 850px) 100vw, 42vw" /></div></Link>)}
+      {services.map((service) => <Link href={`/services/${service.slug}`} key={service.slug} className={`service-row service-row-${service.slug}`}><div className="service-row-copy"><span>{service.number}</span><h2>{service.title}</h2><p>{service.short}</p><b>View service ↗</b></div><div className="service-row-image"><Image src={service.image} alt={`${service.title} by Embellish Design`} fill sizes="(max-width: 850px) 100vw, 50vw" /></div></Link>)}
     </section>
   </main>;
 }

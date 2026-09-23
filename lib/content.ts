@@ -32,7 +32,7 @@ export const services: Service[] = [
     title: "Construction Work",
     short: "Reliable building and civil construction delivered with disciplined planning, supervision and quality control.",
     intro: "We manage construction work from site preparation through structural, architectural and finishing stages, coordinating trades, materials and inspections around a clear programme.",
-    image: "/embellish-construction-site-v2.webp",
+    image: "/embellish-construction-pour-v3.webp",
     deliverables: ["Site preparation and mobilisation", "Structural and civil works", "Blockwork, plastering and finishes", "Testing, snagging and handover"],
     process: [
       { title: "Assess", text: "Review the site, drawings, scope, access and authority requirements." },

@@ -1,3 +1,16 @@
-import {Footer,Header,PageHero} from "@/components/site-chrome";
-const items=[["Interior Fit-Out","Turnkey office, retail, restaurant and residential fit-out."],["Civil & Renovation","Partitions, ceilings, flooring, painting and complete upgrades."],["MEP Works","Coordinated mechanical, electrical and plumbing installation."],["Custom Joinery","Bespoke counters, cabinetry, doors and feature elements."],["Design & Planning","Space planning, material selection and technical detailing."],["Project Management","Cost, schedule, trades and quality controlled by one team."]];
-export default function Services(){return <main><Header/><PageHero label="OUR SERVICES" title="One team. Every detail." text="Integrated design and build services shaped around your space, timeline and commercial goals." image="https://villapaintingservice.com/wp-content/uploads/2025/06/Pt8JgHERRK64i2BN3PhZbw.jpg"/><section className="page-content"><div className="detail-grid">{items.map((x,i)=><article key={x[0]}><span>0{i+1}</span><h2>{x[0]}</h2><p>{x[1]}</p></article>)}</div></section><Footer/></main>}
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { PageHero } from "@/components/site-chrome";
+import { services } from "@/lib/content";
+
+export const metadata: Metadata = { title: "Interior Fit-Out Services Dubai", description: "Explore Embellish Design's fit-out, renovation, MEP, joinery, design and project management services in Dubai." };
+
+export default function ServicesPage() {
+  return <main><PageHero label="OUR SERVICES" title="One team. Every detail." text="Integrated design and build services shaped around your space, timeline and commercial goals." image={services[4].image} />
+    <section className="page-content service-list">
+      {services.map((service) => <Link href={`/services/${service.slug}`} key={service.slug} className="service-row"><div className="service-row-copy"><span>{service.number}</span><h2>{service.title}</h2><p>{service.short}</p><b>View service ↗</b></div><div className="service-row-image"><Image src={service.image} alt={service.title} fill sizes="(max-width: 850px) 100vw, 42vw" /></div></Link>)}
+    </section>
+  </main>;
+}
+

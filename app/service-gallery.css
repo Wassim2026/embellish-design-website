@@ -1,0 +1,108 @@
+.construction-work-gallery {
+  padding: 110px 5vw;
+  background: var(--ink);
+  color: #fff;
+}
+
+.construction-work-gallery .section-heading {
+  gap: 7vw;
+  align-items: end;
+}
+
+.construction-work-gallery .section-heading > p {
+  max-width: 520px;
+  margin: 0;
+  color: #bbb;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.construction-work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.construction-work-grid article > div {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.construction-work-grid img {
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.construction-work-grid article:hover img {
+  transform: scale(1.025);
+}
+
+.construction-work-grid span {
+  display: block;
+  margin-top: 24px;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.construction-work-grid h3 {
+  margin: 12px 0 9px;
+  font: 35px Georgia, serif;
+}
+
+.construction-work-grid p {
+  max-width: 570px;
+  margin: 0;
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.construction-site-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 75px;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+}
+
+.construction-site-strip article > div {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.construction-site-strip img {
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.construction-site-strip article:hover img {
+  transform: scale(1.025);
+}
+
+.construction-site-strip span {
+  display: block;
+  margin-top: 18px;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.construction-site-strip h3 {
+  margin: 10px 0 0;
+  font: 25px/1.15 Georgia, serif;
+}
+
+@media (max-width: 850px) {
+  .construction-work-gallery { padding: 80px 6vw; }
+  .construction-work-gallery .section-heading { display: grid; gap: 28px; }
+  .construction-work-grid { grid-template-columns: 1fr; gap: 55px; }
+  .construction-work-grid article > div { min-height: 0; aspect-ratio: 4 / 3; }
+  .construction-site-strip { grid-template-columns: 1fr; gap: 45px; margin-top: 60px; }
+  .construction-site-strip article > div { aspect-ratio: 4 / 3; }
+}

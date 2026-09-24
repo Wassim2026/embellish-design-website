@@ -5,6 +5,7 @@ import "./pages.css";
 import "./forms.css";
 import "./navigation.css";
 import "./home-refresh.css";
+import "./service-gallery.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://embellish-design-website.vercel.app"),
